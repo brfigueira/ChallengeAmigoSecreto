@@ -15,47 +15,7 @@
     <li><strong>CSS</strong></li>
 </ul>
 
-<h2>🤝 Autores</h2>
-<p>Seus nomes e qualquer outra informação relevante aqui.</p>
-
-<pre>
-<code>
-/**
- * Função que embaralha os elementos de um array.
- * Utiliza o algoritmo de Fisher-Yates para garantir uma mistura aleatória.
- * 
- * @param {Array} arr - O array a ser embaralhado.
- */
-function embaralhaArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-}
-
-/**
- * Função que realiza o sorteio de amigo secreto.
- * Embaralha a lista de amigos e garante que ninguém tire a si mesmo.
- * Atualiza a interface do usuário com os resultados do sorteio.
- */
-function sortear() {
-  elemListaSorteio.innerHTML = "";
-
-  // Embaralha a lista de amigos.
-  embaralhaArray(amigos);
-
-  // Distribui os amigos e garante que o último amigo
-  // sorteie o primeiro amigo na lista para fechar o ciclo.
-  for (let i = 0; i < amigos.length; i++) {
-    if (i == amigos.length - 1) {
-      elemListaSorteio.innerHTML += `${amigos[i]} --> ${amigos[0]}<br>`;
-    } else {
-      elemListaSorteio.innerHTML += `${amigos[i]} --> ${amigos[i + 1]}<br>`;
-    }
-  }
-}
-</code>
-</pre>
+<h2>🤝</h2>
 
 </body>
 </html>
